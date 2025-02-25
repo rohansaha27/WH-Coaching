@@ -55,9 +55,9 @@
 <!-- Services Section Code -->
 
 <section class="services" id="services">
-    <h2 class="heading" data-aos="zoom-in-down">Our <span>Services</span></h2>
+    <h2 class="heading" data-aos="zoom-in">Our <span>Services</span></h2>
 
-    <div class="services-content" data-aos="zoom-in-up">
+    <div class="services-content" data-aos="zoom-in">
         <!-- Video Support -->
         <div class="row">
             <video src="src/assets/chat.mp4" autoplay loop muted playsinline></video>
@@ -104,16 +104,16 @@
  <!-- Success Stories Section -->
 
 <section class="success-stories" id="success-stories">
-    <h2 class="heading" data-aos="zoom-in-down">Success <span>Stories</span></h2>
+    <h2 class="heading"> Success <span>Stories</span></h2>
 
     <!-- Short Paragraph Below Heading -->
-    <p class="success-description" data-aos="fade-up">
+    <p class="success-description" >
         As your health and fitness coach, you will receive 24/7 support from me, directly through my app. 
         I will be there to answer any questions you may have, provide you with the motivation you need, 
         and help you stay on track to reach your goals.
     </p>
 
-    <div class="slider-container" data-aos="zoom-in-up">
+    <div class="slider-container" >
         <div class="slider">
             <img src="src/assets/slider/image1.jpg" alt="Success Story 1">
             <img src="src/assets/slider/image2.jpg" alt="Success Story 2">
@@ -145,17 +145,16 @@
         </div>
     </div>
 </section>
-</section>
 
 <!-- Book A Meeting Section -->
 
 <section id="book-meeting" class="book-meeting">
     <div class="booking-box">
-        <h2 class="heading" data-aos="zoom-in-down">Book A <span>Meeting</span></h2>
+        <h2 class="heading" m>Book A <span>Meeting</span></h2>
 
         <!-- Enlarged TinyCal Booking Widget -->
-        <div class="booking-container" data-aos="zoom-in-up">
-            <iframe src="https://tidycal.com/walterhaller26/coached-by-wh-discovery-call-1x0doez" class="booking-iframe" frameborder="0"></iframe>
+        <div class="booking-container">
+            <iframe src="https://tidycal.com/walterhaller26/coached-by-wh-discovery-call-1x0doez" class="booking-iframe no-aos" frameborder="0"></iframe>
         </div>
     </div>
 </section>
@@ -179,9 +178,12 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            offset: 300,
-            duration: 1400,
-        });
+    offset: 50,  // Trigger animations earlier
+    duration: 800,  // Faster animations
+    easing: 'ease-in-out', 
+    once: true,  // Animations run only once
+    delay: 0, // Ensures animations start immediately
+}); 
     </script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="/script.js"></script>

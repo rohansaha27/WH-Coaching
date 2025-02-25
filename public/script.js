@@ -15,6 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
         };
     }
 
+    // AOS Animations 
+
+    document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({
+            offset: 50,  // Ensures animation starts earlier
+            duration: 800,  // Faster animations
+            easing: 'ease-in-out',
+            once: true,  // Prevents re-triggering on scroll
+            delay: 0,  // Ensures animations start immediately
+        });
+    });
+
     // Typed.js Animation for Multiple Text
     if (document.querySelector('.multiple-text')) {
         new Typed('.multiple-text', {
