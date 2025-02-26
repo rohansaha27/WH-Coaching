@@ -1,3 +1,3 @@
 # Built using React + Vite
 
-Made for https://www.instagram.com/coached_by_wh/ :)
+Made for https://www.instagram.com/coached_by_wh/
