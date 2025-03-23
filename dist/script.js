@@ -96,4 +96,13 @@ if (slider) {
 
   autoScroll();
 }
+
+// Prevening right click on Desktop
+document.addEventListener("contextmenu", function (e) {
+    if (e.target.closest(".success-stories")) {
+      e.preventDefault();
+    }
+  });
+
+  
 });
