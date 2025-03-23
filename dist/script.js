@@ -46,37 +46,54 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Success Stories Auto-Scrolling
-    const slider = document.querySelector(".slider");
+// Success Stories Auto-Scrolling
+const slider = document.querySelector(".slider");
 
-    if (slider) {
-        let scrollAmount = 0;
-        const scrollStep = 2; // Controls speed
-        const maxScroll = slider.scrollWidth / 2;
-        let scrolling = true; // Controls when to stop scrolling
+if (slider) {
+  let scrollAmount = 0;
+  const scrollStep = 2; // Controls speed
+  const maxScroll = slider.scrollWidth / 2;
+  let scrolling = true;
 
-        function autoScroll() {
-            if (scrolling) {
-                if (scrollAmount >= maxScroll) {
-                    scrollAmount = 0; // Reset to start for infinite loop
-                } else {
-                    scrollAmount += scrollStep;
-                }
-                slider.style.transform = `translateX(-${scrollAmount}px)`;
-            }
-            requestAnimationFrame(autoScroll);
-        }
-
-        // Stop scrolling on hover
-        slider.addEventListener("mouseenter", () => {
-            scrolling = false;
-        });
-
-        // Resume scrolling when mouse leaves
-        slider.addEventListener("mouseleave", () => {
-            scrolling = true;
-        });
-
-        autoScroll(); // Start scrolling
+  function autoScroll() {
+    if (scrolling) {
+      if (scrollAmount >= maxScroll) {
+        scrollAmount = 0;
+      } else {
+        scrollAmount += scrollStep;
+      }
+      slider.style.transform = `translateX(-${scrollAmount}px)`;
     }
+    requestAnimationFrame(autoScroll);
+  }
+
+  // Desktop hover control
+  slider.addEventListener("mouseenter", () => {
+    if (!isTouchDevice()) {
+      scrolling = false;
+    }
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    if (!isTouchDevice()) {
+      scrolling = true;
+    }
+  });
+
+  // Mobile touch control
+  slider.addEventListener("touchstart", () => {
+    scrolling = false;
+  });
+
+  slider.addEventListener("touchend", () => {
+    scrolling = true;
+  });
+
+  // Utility to detect touch devices
+  function isTouchDevice() {
+    return "ontouchstart" in window || navigator.maxTouchPoints > 0;
+  }
+
+  autoScroll();
+}
 });
