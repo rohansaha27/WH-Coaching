@@ -467,6 +467,17 @@ span {
 
 /* Success Stories Section */
 
+/* Prevent touch selection and dragging in success stories */
+.success-stories,
+.success-stories * {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE */
+  -webkit-user-drag: none;   /* Disable image dragging in Safari */
+  touch-action: manipulation;
+}
+
 .success-stories {
   background: var(--second-bg-color);
   text-align: center;
