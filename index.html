@@ -91,7 +91,7 @@
         </div>
 
         <div class="about-content">
-            <h2 class="heading">Why Choose Us?</h2>
+            <h2 class="heading">Why <span>Us?</span></h2>
             <p>Hi! l'm Walter and this is Coached_by_WH. </p>
             <p>I'm an online coach helping people achieve their fitness goals and live a happier lifestyle. I am always striving to be the best version of myself and to build the same work ethic within my clients. Online coaching provides me with a platform to track and monitor your progress efficiently with regards to fitness and nutrition goals as well as improving your mindset and overall lifestyle. The aim is to make sure you have fun and enjoy the fitness road towards your goals.
                 Knowledge, motivation, energy and enjoyment are key to becoming physically and mentally healthier. I myself have always played football and been into fitness although I grew up being very skinny, and then became fat until I got addicted to the gym. My own muscle growth transformation along with my ever-increasing knowledge from relentless research encouraged me to complete 3 different personal training courses, become an online coach and help clients partake in my and their fitness road to success. 
@@ -158,6 +158,26 @@
         </div>
     </div>
 </section>
+
+<!-- Free Resources Section -->
+<section id="free-resources" class="free-resources">
+    <h2 class="heading">Free <span>Resources</span></h2>
+    <p class="success-description">Enter your email below for a free Bulking and Shredding book:</p>
+  
+    <form class="resources-form">
+        <input type="email" name="user_email" placeholder="Enter your email" required />
+        <button type="submit" class="btn">Get My Free eBook</button>
+      </form>
+</section>
+  
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init('BgqywFSr9JEurqOzO'); 
+  })();
+</script>
+<script src="/email.js"></script>
  
 
     <!-- Footer Section -->
@@ -187,7 +207,6 @@
     </script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="/script.js"></script>
-
 </body>
 
 </html>

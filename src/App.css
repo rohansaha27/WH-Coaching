@@ -780,3 +780,93 @@ span {
       font-size: 50%;
   }
 }
+
+/* Free Resources Section */
+.free-resources {
+  background: var(--second-bg-color);
+  text-align: center;
+  padding: 10rem 8% 2rem;
+}
+
+.free-resources .heading {
+  font-size: 8rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+/* Updated body text size here */
+.free-resources .success-description {
+  font-size: 3.2rem; /* Text size */
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.resources-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.resources-form input[type="email"] {
+  padding: 1.5rem;
+  font-size: 2.5rem; /* input box size */
+  width: 400px;
+  border-radius: 1rem;
+  border: 2px solid var(--main-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.resources-form input[type="email"]::placeholder {
+  color: #aaa;
+}
+
+.resources-form .btn {
+  font-size: 2rem; /* button font */
+  padding: 1.5rem 4rem;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resources-form .btn:hover {
+  background-color: var(--text-color);
+  color: var(--main-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resources-form input[type="email"] {
+    width: 90%;
+  }
+
+  .free-resources .heading {
+    font-size: 5rem;
+  }
+
+  .free-resources .success-description {
+    font-size: 2rem;
+  }
+}
+
+.success-message {
+  font-size: 3rem; /* button font */
+  color: #4CAF50;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.error-message {
+  font-size: 3rem; /* button font */
+  color: #f44336;
+  margin-top: 10px;
+  font-weight: 500;
+}

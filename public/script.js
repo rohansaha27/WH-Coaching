@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Menu Toggle
-    let menu = document.querySelector('#menu-icon');
+    let menu = document.queryfISelector('#menu-icon');
     let navbar = document.querySelector('.navbar');
 
     if (menu && navbar) {
