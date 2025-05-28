@@ -1,4 +1,5 @@
 // Gemini Chatbot Implementation
+
 document.addEventListener('DOMContentLoaded', function() {
   // Create the chat interface elements
   createChatInterface();
@@ -21,7 +22,8 @@ function createChatInterface() {
   
   // Add icon to button
   const icon = document.createElement('img');
-  icon.src = 'src/assets/favicon.png';
+  // Use the favicon from the public directory
+  icon.src = '/favicon.png';
   icon.alt = 'Chat';
   chatButton.appendChild(icon);
   

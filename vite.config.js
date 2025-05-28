@@ -1,4 +1,4 @@
-<script src="src/gemini-chatbot.js"> in "/index.html" can't be bundled without type="module" attributeimport { defineConfig } from 'vite'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dotenv from 'dotenv'
 
